@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Terrific Trivia &and; Tabulations</title>
+		<!-- Reset CSS -->
+	<!-- 	<link rel="stylesheet" type="text/css" href=""> -->
+	<!-- Bootstrap CSS -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<!-- Custom JS -->
+  	<script type = "text/javascript" src = "./assets/javascript/game.js"></script>
+</head>
+<body>
+	<div class="container body-wrapper"> <!-- Start Wrapper -->
+		<div class="page-header header">
+			<h1>Try your hand at our Trivia!</h1>
+			<h3> rules here </h3>
+		</div> <!-- End Header -->
+
+		<div class="container"> <!-- Begin Main Body -->
+			<div class="row" id = "main-body-questions">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<div class = "timer" id = "display-box"></div>
+					<div id = "question-box"></div>
+					<div><span id = "question-box"></span></div>
+					<div class="btn-group btn-group-justified" role = "group" aria-label = "..." >
+						<button class = "btn btn-default"><span id = "ans1"></span></button>
+						<button class = "btn btn-default"><span id = "ans2"></span></button>
+						<button class = "btn btn-default"><span id = "ans3"></span></button>
+						<button class = "btn btn-default"><span id = "ans4"></span></button>
+					</div>
+				</div>
+				<div class="col-sm-3"></div>
+			</div>
+
+			<div class="row" id = "main-body-answers">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<div id = "answer-box"></div>
+					<div><span id = "correct-answer-count"></span></div>
+				</div>
+				<div class="col-sm-3"></div>
+			</div>
+		</div> <!-- End Main Body -->
+	</div> <!-- End Wrapper -->
+	
+</body>
+</html>
