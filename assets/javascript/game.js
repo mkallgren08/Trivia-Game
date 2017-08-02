@@ -1,4 +1,5 @@
-
+// QUESTION OBJECTS AND answers
+//-----------------------------------------------------
 
 var quesOne = {
 		question: "What is piezoelectricty?",
@@ -90,17 +91,44 @@ var quesTen = {
 };
 var quesTenAns =  quesTen.ans2;
 
+var timer = {
+		  reset: function() {
+		    time = 15;
+		    $("#timer").html(timer)
+
+		  },
+
+		  runTimer: function() {
+		          intervalID = setInterval(decrement, 1000)
+		      },
+
+		  
+		  stop: function() {
+		    //  TODO: Use clearInterval to stop the count here and set the clock to not be running.
+		        clearInterval(IntervalID);
+		  },
+
+
+		      
+		 } // End of timer object
+
+// GENERAL VARIABLES
+//-------------------------------------------------------------
 var questionArr = [quesOne, quesTwo, quesThree, quesFour, quesFive, 
 				   quesSix, quesSeven, quesEight, quesNine, quesTen]
+
 var answerArr = [quesOneAns, quesTwoAns, quesThreeAns, quesFourAns, quesFiveAns, 
 				 quesSixAns, quesSevenAns, quesEightAns, quesNineAns, quesTenAns]
 
-var index = ""
-var indexOrder = []
-var correct = 0
-var total = questionArr.length
+var shuffledQuestionIndexes = [0,1,2,3,4,5,6,7,8,9]
+var correct = 0;
+var total = questionArr.length;
+var time;
 
-$(document).ready(function() {
+//FUNCTIONS
+//-------------------------------------------------------------
+	
+
 	function QuesandAnsCheck(array1, array2){
 		for (var i = 0; i <array1.length; i++ ){
 			console.log(array1[i].question);
@@ -112,10 +140,16 @@ $(document).ready(function() {
 	//Create a timer reset function
 
 	// Create a function to display all the questions in a certain order to be invoked on "start" button click:
+	$("#start-button").click(runTrivia())
 
 		// - use a for-loop, where var i = the indexes of QuestionArr
-				// - show the "#main-body" row
-				// - run timerreset function to set timer to 15 sec
+	function runTrivia(question_array){
+		// - show the "#main-body" row
+		$("#main-body-questions").show();
+		// - run timerreset function to set timer to 15 sec & begin counting down from new time
+		timer.reset();
+		setTimeout(timer.runTimer, 650)
+		
 				// - display questionArr[i].question to the question-box
 				// - display the 4 answers to their respective answer buttons using questionArr[i].ans1, .ans2, etc.)
 				// - set a half-second delay and then run the timercountdownfunction
@@ -133,19 +167,49 @@ $(document).ready(function() {
 				//   - write the correct score into the current score div
 
 				// The function SHOULD loop after the 10 secs....
+		}
+	// shuffle function from AnnaLisa
 
+		
 
+function shuffle(array) {
+		  var currentIndex = array.length, temporaryValue, randomIndex;
 
+		  // While there remain elements to shuffle...
+		  while (0 !== currentIndex) {
 
-	// QuesandAnsCheck(questionArr, answerArr);
-	function shuffleArray(array_to_shuffle){
-			indexOrder = Collections.shuffle(Arrays.asList(array_to_shuffle));
-			return indexOrder;
-	}
+		    // Pick a remaining element...
+		    randomIndex = Math.floor(Math.random() * currentIndex);
+		    currentIndex -= 1;
 
-	console.log(questionArr[0].question);
+		    // And swap it with the current element.
+		    temporaryValue = array[currentIndex];
+		    array[currentIndex] = array[randomIndex];
+		    array[randomIndex] = temporaryValue;
+		  }
 
-	shuffleArray(questionArr);
+		  return array;
+		}
+
+function decrement() {
+	time--;
+	if (time === 0) {
+    	stop();
+   	};
+};
+
+function gotoAnswer(){
+
+	};
+//EXECUTABLE CODE
+//-------------------------------------------------------------
+
+$(document).ready(function() {
+	$("#total-correct").html(correct)
+	$("#total-questions").html(total)
+	$("#main-body-questions").hide();
+	$("#main-body-answers").hide();
+
 
 });
 
