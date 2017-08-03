@@ -1,3 +1,18 @@
 .btn{
-	
+	word-wrap: break-word;
+}
+
+.divisor{
+	width: 50px;
+	border-bottom: 3px solid black;
+}
+
+.progress-bar{
+	min-width: 6em; 
+	width: 0%;
+}
+
+.score{
+	font-style: bold;
+	font-size: 20px;
 }

@@ -59,11 +59,11 @@ var quesSixAns =  quesSix.ans2;
 var quesSeven = {
 		question: "What is a superconductor?",
 		ans1: "A fantastic leader of a music ensemble.",
-		ans2: "Ketchup",
-		ans3: "Salt water",
-		ans4: "Bourbon",		
+		ans2: "Any material whose electrical resistance is less than a saturated saltwater solution at 20C",
+		ans3: "A material that expels magnetic fields",
+		ans4: "A metal whose electrical conductivity is less than that of pure copper",		
 };
-var quesSevenAns =  quesSeven.ans2;
+var quesSevenAns =  quesSeven.ans3;
 
 var quesEight = {
 		question: "How old was Sir Isaac Newton when  Principia Mathematica - the work that outlined the fundamentals of his new math known as calculus - was published?",
@@ -75,22 +75,22 @@ var quesEight = {
 var quesEightAns =  quesEight.ans4;
 
 var quesNine = {
-		question: "Which of the following is a non-Newtonian liquids?",
-		ans1: "Molten gold",
-		ans2: "Ketchup",
-		ans3: "Salt water",
-		ans4: "Bourbon",		
+		question: "What is the maximum recorded G-load (acceleration) that the human body has survived?",
+		ans1: "~10 Gs",
+		ans2: "~60 Gs",
+		ans3: "~15 Gs",
+		ans4: "~40 Gs",		
 };
-var quesNineAns =  quesNine.ans2;
+var quesNineAns =  quesNine.ans4;
 
 var quesTen = {
-		question: "Which of the following is a non-Newtonian liquids?",
-		ans1: "Molten gold",
-		ans2: "Ketchup",
-		ans3: "Salt water",
-		ans4: "Bourbon",		
+		question: "What sports did Dr. Neil deGrasse Tyson participate while studying physics at Harvard?",
+		ans1: "Crew",
+		ans2: "Wrestling",
+		ans3: "Dance",
+		ans4: "All of those",		
 };
-var quesTenAns =  quesTen.ans2;
+var quesTenAns =  quesTen.ans4;
 
 var IntervalID = ""
 
@@ -146,77 +146,27 @@ var answerArr = [quesOneAns, quesTwoAns, quesThreeAns, quesFourAns, quesFiveAns,
 var shuffledQuestionIndexes = [0,1,2,3,4,5,6,7,8,9]
 var correct = 0;
 var total = questionArr.length;
-var time = 4;
+var time = 20;
 var readAnswer = false;
 var userGuess = "";
 var j
-var ansKey = ["ans3", "ans4", "ans2", "ans1"]
+var ansKey = ["ans3", "ans4", "ans2", "ans1", "ans3", "ans2", "ans3", "ans4", "ans4", "ans4"]
+var questionCount = 0;
 
 //FUNCTIONS
-//-------------------------------------------------------------
-	
-
-	// function QuesandAnsCheck(array1, array2){
-	// 	for (var i = 0; i <array1.length; i++ ){
-	// 		console.log(array1[i].question);
-	// 		console.log(array2[i]);
-	// 	}
-	// } 
-	// Create a timer function that will count down from 15 seconds - see interval-unsolved.html
-
-	//Create a timer reset function
-
-	// Create a function to display all the questions in a certain order to be invoked on "start" button click:
-
-		// - use a for-loop, where var i = the indexes of QuestionArr
-
-	// function runTrivia(){
-		// shuffle the index questions
-		// - show the "#main-body-questions" row
-		// $("#questions").show();
-		// //Start the for-loop for the main automation
-		// for (j = 0; j < (questionArr.length-1); j++)
-		// 	// Set readAnswer = false
-		// 	// Populate the question box and the answer buttons
-		// 	$("#question-box").html(questionArr[shuffledQuestionIndexes[j]].question);
-		// 	console.log(j);
-		// 	console.log(shuffledQuestionIndexes[j]);
-		// 	console.log(questionArr[shuffledQuestionIndexes[j]]);
-		// 	$("#ans1").html(questionArr[shuffledQuestionIndexes[j]].ans1);
-		// 	$("#ans2").html(questionArr[shuffledQuestionIndexes[j]].ans2);
-		// 	$("#ans3").html(questionArr[shuffledQuestionIndexes[j]].ans3);
-		// 	$("#ans4").html(questionArr[shuffledQuestionIndexes[j]].ans4);
-		// 	// - run timerreset function to set timer to 15 sec & begin counting down from new time
-		// 	timer.reset();
-		// 	setTimeout(timer.runTimer, 650)
-		// 	// Log the userGuess via button input
-		// 	$(".ans-btn").click(function(){
-		// 		userGuess = $(this).attr("id")
-		// 		console.log(userGuess);
-		// 	});
-			// if (time === 0){
-			// 	$("#answers").show();
-			// 	$("#answer-box").html(answerArr[shuffledQuestionIndexes[j]]);
-			// 	while (readAnswer = false){ 
-			// 		if(questionArr[shuffledQuestionIndexes[j]].userGuess = answerArr[shuffledQuestionIndexes[j]]){
-			// 			$("#rightorwrong").html("<h2>Correct!</h2>");
-			// 			correct++;
-			// 			$("#correct-answer-count").html(correct);
-			// 			setTimeout(nextQuestion, 5000);
-			// 		} else {
-			// 			$("#rightorwrong").html("<h2>I'm sorry, that is incorrect.</h2>")
-			// 			setTimeout(nextQuestion, 12000);
-			// 		}
-			// 	}; 
-
-			// }; 
-		// 	$("#answers").hide();
-		
-
-		// };
+//----------------------------------------------------------------------------------------
 	
 function run() {
-	  $("#questions").show()
+	  $("#questions").show(300);
+	  questionCount++;
+	  $(".question-number").html(questionCount)
+	  $(".total-correct").html(correct);
+	  $(".total-questions").html(questionArr.length);
+	  $("#question-box").html(questionArr[shuffledQuestionIndexes[j]].question)
+	  $("#answer1").html(questionArr[shuffledQuestionIndexes[j]].ans1)
+	  $("#answer2").html(questionArr[shuffledQuestionIndexes[j]].ans2)
+	  $("#answer3").html(questionArr[shuffledQuestionIndexes[j]].ans3)
+	  $("#answer4").html(questionArr[shuffledQuestionIndexes[j]].ans4)
       intervalId = setInterval(decrement, 1000);
     }
 
@@ -228,7 +178,7 @@ function decrement() {
       if (time === 0 || userGuess !== "") {
          $("#timer").html(time);
         pause();
-        $("#answer").show();
+        $("#answers").show();
         //displayAns();
         setTimeout(displayAns, 500);
       }
@@ -240,7 +190,7 @@ function pause() {
 }
 
 function reset() {
-    time = 4
+    time = 20
     $("#timer").html(time);
     userGuess = ""
     console.log("User Guess: " + userGuess)
@@ -251,23 +201,26 @@ function reset() {
     var j = 0
 
 function displayAns(){
+		$("#questions").hide(250)
+		$("#total-correct").html(correct);
+		$("#total-questions").html(questionArr.length);
         var answerText = answerArr[shuffledQuestionIndexes[j]];
         if (ansKey[shuffledQuestionIndexes[j]] === userGuess){
         	console.log("Correct!")
         	correct++;
-        	$("#correct-answer-count").html(correct);
+        	$(".total-correct").html(correct);
         	$("#rightorwrong").html("<h2>Correct!</h2>");
         } else {
         	$("#rightorwrong").html("<h2>I'm sorry, that is incorrect.</h2>")
         }
         console.log("Answer: " + answerText)
         $("#answer-box").html(answerText)
-        if (j < 4){
+        if (j < questionArr.length){
           j++;
           console.log("j=" + j)
         }
        	setTimeout(reset, 3000);
-        if (j < 4){
+        if (j < questionArr.length){
           setTimeout(run, 4000);
         }
     }          
@@ -321,6 +274,8 @@ $(document).ready(function() {
 	// })
 	$("#questions").hide();
 	$("#answers").hide();
+
+
 	$(".ans-btn").click(function(){
 		userGuess = $(this).attr("id")
 		console.log(userGuess)
@@ -329,6 +284,9 @@ $(document).ready(function() {
 	})
 
 	$("#start-button").click(function(){
+		$("#start-button").hide()
+		shuffle(shuffledQuestionIndexes);
+		console.log(shuffledQuestionIndexes);
 		run();
 	});
 

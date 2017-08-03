@@ -1,7 +1,7 @@
 quesArr[shuffledindexes[i]]
 
 
-THIS SHOULD BE THE LAST STEP OF THE runTrivia FUNCTION'S FOR-LOOP
+THIS SHOULD BE THE Penultimate STEP OF THE runTrivia FUNCTION'S FOR-LOOP
           |
           |
           V
@@ -11,7 +11,73 @@ while (readAnswer === false){
 	1) show Answer display
 	2) setTimeout(nextQuestion // a function //, 15000)
 
+After while-loop:
+
+hide answer display
+
 function nextQuestion(){
 	readAnswer === true
 }
 
+
+
+				// - display questionArr[i].question to the question-box
+				// - display the 4 answers to their respective answer buttons using questionArr[i].ans1, .ans2, etc.)
+				// - set a half-second delay and then run the timercountdownfunction
+				// - set a .click(function(){}) to hide the question row and display the answer row
+				// 		- include a userGuess = $("this").attr("id")
+				// 		- if (questionArr[i].userGuess = answerArr[i]){
+				//			correct++;
+				// 		}
+				// 	- if (time-left === 0){
+				//		hide the question row, show the answer row
+				// 		}
+				// When answer row is shown, set 10 second timer
+				//  to include in answer row:
+				//   - the correct answer to the answer
+				//   - write the correct score into the current score div
+
+				// The function SHOULD loop after the 10 secs....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	function runTrivia(){
+		// - show the "#main-body-questions" row
+		$("#questions").show();
+		//Start the for-loop for the main automation
+		for (var j = 0; j < questionArr.length; j++)
+		// Populate the question box and the answer buttons
+		$("#question-box").html(questionArr[shuffledQuestionIndexes[j]].question);
+		$("#ans1").html(questionArr[shuffledQuestionIndexes[j]].ans1);
+		$("#ans2").html(questionArr[shuffledQuestionIndexes[j]].ans2);
+		$("#ans3").html(questionArr[shuffledQuestionIndexes[j]].ans3);
+		$("#ans4").html(questionArr[shuffledQuestionIndexes[j]].ans4);
+		// - run timerreset function to set timer to 15 sec & begin counting down from new time
+		timer.reset();
+		setTimeout(timer.runTimer, 650)
+		$(".ans-btn").click(function(){
+			userGuess = $(this).attr("id")
+		});
+		if (time === 0){
+			$("#answers").show();
+			$("#answer-box").html();
+
+			if(userGuess === answerArr[shuffledQuestionIndexes[j]]){
+				$("#rightorwrong").html("<h2>Correct!</h2>");
+			}
+
+		}
