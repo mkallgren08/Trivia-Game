@@ -6,7 +6,8 @@ var quesOne = {
 		ans1: "The first electrical effect observed in biological creatures, documented by Italian biologist Vincente Piezo.",
 		ans2: "An electrical discharge that occurs when the mineral piezite is heated.",
 		ans3: "An electrical charge that accumulates in certain materials in response to mechanical stress. From the Greek 'piezo' - 'to squeeze'.",
-		ans4: "The amount of electricty needed to safely cook a 14-inch classic-crust pizza, or 'piezo' in Urdu.",		
+		ans4: "The amount of electricty needed to safely cook a 14-inch classic-crust pizza, or 'piezo' in Urdu.",
+
 };
 var quesOneAns =  quesOne.ans3;
 
@@ -91,26 +92,48 @@ var quesTen = {
 };
 var quesTenAns =  quesTen.ans2;
 
-var timer = {
-		  reset: function() {
-		    time = 15;
-		    $("#timer").html(timer)
+var IntervalID = ""
 
-		  },
+// var timer = {
+// 		  reset: function() {
+// 		    time = 20;
+// 		    $("#timer").html(timer)
 
-		  runTimer: function() {
-		          intervalID = setInterval(decrement, 1000)
-		      },
+// 		  },
+
+// 		  runTimer: function() {
+// 		           intervalID = setInterval(timer.decrement, 1000)
+// 		      },
 
 		  
-		  stop: function() {
-		    //  TODO: Use clearInterval to stop the count here and set the clock to not be running.
-		        clearInterval(IntervalID);
-		  },
+// 		  stop: function() {
+// 		    //  TODO: Use clearInterval to stop the count here and set the clock to not be running.
+// 		        clearInterval(IntervalID);
+// 		  },
 
+// 		  decrement: function() {
+// 			time--;
+// 			$("#timer").html(time)
+// 			if (time === 0){
+// 				$("#answers").show();
+// 				$("#answer-box").html(answerArr[shuffledQuestionIndexes[j]]);
+// 				while (readAnswer = false){ 
+// 					if(questionArr[shuffledQuestionIndexes[j]].userGuess = answerArr[shuffledQuestionIndexes[j]]){
+// 						$("#rightorwrong").html("<h2>Correct!</h2>");
+// 						correct++;
+// 						$("#correct-answer-count").html(correct);
+// 						setTimeout(nextQuestion, 5000);
+// 					} else {
+// 						$("#rightorwrong").html("<h2>I'm sorry, that is incorrect.</h2>")
+// 						setTimeout(nextQuestion, 12000);
+// 					}
+// 				}; 
 
+// 			}; 			
+
+// 		  }
 		      
-		 } // End of timer object
+// 		 } // End of timer object
 
 // GENERAL VARIABLES
 //-------------------------------------------------------------
@@ -123,55 +146,135 @@ var answerArr = [quesOneAns, quesTwoAns, quesThreeAns, quesFourAns, quesFiveAns,
 var shuffledQuestionIndexes = [0,1,2,3,4,5,6,7,8,9]
 var correct = 0;
 var total = questionArr.length;
-var time;
+var time = 4;
+var readAnswer = false;
+var userGuess = "";
+var j
+var ansKey = ["ans3", "ans4", "ans2", "ans1"]
 
 //FUNCTIONS
 //-------------------------------------------------------------
 	
 
-	function QuesandAnsCheck(array1, array2){
-		for (var i = 0; i <array1.length; i++ ){
-			console.log(array1[i].question);
-			console.log(array2[i]);
-		}
-	} 
+	// function QuesandAnsCheck(array1, array2){
+	// 	for (var i = 0; i <array1.length; i++ ){
+	// 		console.log(array1[i].question);
+	// 		console.log(array2[i]);
+	// 	}
+	// } 
 	// Create a timer function that will count down from 15 seconds - see interval-unsolved.html
 
 	//Create a timer reset function
 
 	// Create a function to display all the questions in a certain order to be invoked on "start" button click:
-	$("#start-button").click(runTrivia())
 
 		// - use a for-loop, where var i = the indexes of QuestionArr
-	function runTrivia(question_array){
-		// - show the "#main-body" row
-		$("#main-body-questions").show();
-		// - run timerreset function to set timer to 15 sec & begin counting down from new time
-		timer.reset();
-		setTimeout(timer.runTimer, 650)
+
+	// function runTrivia(){
+		// shuffle the index questions
+		// - show the "#main-body-questions" row
+		// $("#questions").show();
+		// //Start the for-loop for the main automation
+		// for (j = 0; j < (questionArr.length-1); j++)
+		// 	// Set readAnswer = false
+		// 	// Populate the question box and the answer buttons
+		// 	$("#question-box").html(questionArr[shuffledQuestionIndexes[j]].question);
+		// 	console.log(j);
+		// 	console.log(shuffledQuestionIndexes[j]);
+		// 	console.log(questionArr[shuffledQuestionIndexes[j]]);
+		// 	$("#ans1").html(questionArr[shuffledQuestionIndexes[j]].ans1);
+		// 	$("#ans2").html(questionArr[shuffledQuestionIndexes[j]].ans2);
+		// 	$("#ans3").html(questionArr[shuffledQuestionIndexes[j]].ans3);
+		// 	$("#ans4").html(questionArr[shuffledQuestionIndexes[j]].ans4);
+		// 	// - run timerreset function to set timer to 15 sec & begin counting down from new time
+		// 	timer.reset();
+		// 	setTimeout(timer.runTimer, 650)
+		// 	// Log the userGuess via button input
+		// 	$(".ans-btn").click(function(){
+		// 		userGuess = $(this).attr("id")
+		// 		console.log(userGuess);
+		// 	});
+			// if (time === 0){
+			// 	$("#answers").show();
+			// 	$("#answer-box").html(answerArr[shuffledQuestionIndexes[j]]);
+			// 	while (readAnswer = false){ 
+			// 		if(questionArr[shuffledQuestionIndexes[j]].userGuess = answerArr[shuffledQuestionIndexes[j]]){
+			// 			$("#rightorwrong").html("<h2>Correct!</h2>");
+			// 			correct++;
+			// 			$("#correct-answer-count").html(correct);
+			// 			setTimeout(nextQuestion, 5000);
+			// 		} else {
+			// 			$("#rightorwrong").html("<h2>I'm sorry, that is incorrect.</h2>")
+			// 			setTimeout(nextQuestion, 12000);
+			// 		}
+			// 	}; 
+
+			// }; 
+		// 	$("#answers").hide();
 		
-				// - display questionArr[i].question to the question-box
-				// - display the 4 answers to their respective answer buttons using questionArr[i].ans1, .ans2, etc.)
-				// - set a half-second delay and then run the timercountdownfunction
-				// - set a .click(function(){}) to hide the question row and display the answer row
-				// 		- include a userGuess = $("this").attr("id")
-				// 		- if (questionArr[i].userGuess = answerArr[i]){
-				//			correct++;
-				// 		}
-				// 	- if (time-left === 0){
-				//		hide the question row, show the answer row
-				// 		}
-				// When answer row is shown, set 10 second timer
-				//  to include in answer row:
-				//   - the correct answer to the answer
-				//   - write the correct score into the current score div
 
-				// The function SHOULD loop after the 10 secs....
-		}
-	// shuffle function from AnnaLisa
+		// };
+	
+function run() {
+	  $("#questions").show()
+      intervalId = setInterval(decrement, 1000);
+    }
 
-		
+function decrement() {
+      time--;
+      $("#timer").html(time);
+      console.log(time);
 
+      if (time === 0 || userGuess !== "") {
+         $("#timer").html(time);
+        pause();
+        $("#answer").show();
+        //displayAns();
+        setTimeout(displayAns, 500);
+      }
+    }
+
+function pause() {
+
+    clearInterval(intervalId);
+}
+
+function reset() {
+    time = 4
+    $("#timer").html(time);
+    userGuess = ""
+    console.log("User Guess: " + userGuess)
+    $("#answers").hide(900)
+    }
+
+    // var j has to be global so the logArray function can increase it's value and NOT be overwritten
+    var j = 0
+
+function displayAns(){
+        var answerText = answerArr[shuffledQuestionIndexes[j]];
+        if (ansKey[shuffledQuestionIndexes[j]] === userGuess){
+        	console.log("Correct!")
+        	correct++;
+        	$("#correct-answer-count").html(correct);
+        	$("#rightorwrong").html("<h2>Correct!</h2>");
+        } else {
+        	$("#rightorwrong").html("<h2>I'm sorry, that is incorrect.</h2>")
+        }
+        console.log("Answer: " + answerText)
+        $("#answer-box").html(answerText)
+        if (j < 4){
+          j++;
+          console.log("j=" + j)
+        }
+       	setTimeout(reset, 3000);
+        if (j < 4){
+          setTimeout(run, 4000);
+        }
+    }          
+
+
+
+// shuffle function from AnnaLisa
 function shuffle(array) {
 		  var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -191,24 +294,43 @@ function shuffle(array) {
 		  return array;
 		}
 
-function decrement() {
-	time--;
-	if (time === 0) {
-    	stop();
-   	};
-};
+// };
 
-function gotoAnswer(){
+function nextQuestion(){
+	readAnswer = true;
 
 	};
 //EXECUTABLE CODE
 //-------------------------------------------------------------
 
 $(document).ready(function() {
-	$("#total-correct").html(correct)
-	$("#total-questions").html(total)
-	$("#main-body-questions").hide();
-	$("#main-body-answers").hide();
+	// $("#questions").hide();
+	// $("#answers").hide();
+	// for (var k = 0; k< questionArr.length; k++){
+	// 	console.log("k =" + shuffledQuestionIndexes[k])
+	// }
+	// console.log(questionArr.length);
+	// console.log(quesOne.ans1)
+	// console.log(questionArr[shuffledQuestionIndexes[0]].ans1)
+	// $("#total-correct").html(correct)
+	// $("#total-questions").html(total)
+
+
+	// $("#start-button").click(function(){
+	// 	runTrivia();
+	// })
+	$("#questions").hide();
+	$("#answers").hide();
+	$(".ans-btn").click(function(){
+		userGuess = $(this).attr("id")
+		console.log(userGuess)
+		// console.log(questionArr[shuffledQuestionIndexes[j]].userGuess)
+		console.log(answerArr[shuffledQuestionIndexes[j]])
+	})
+
+	$("#start-button").click(function(){
+		run();
+	});
 
 
 });

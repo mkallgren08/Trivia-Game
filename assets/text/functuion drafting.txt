@@ -1,0 +1,17 @@
+quesArr[shuffledindexes[i]]
+
+
+THIS SHOULD BE THE LAST STEP OF THE runTrivia FUNCTION'S FOR-LOOP
+          |
+          |
+          V
+
+while (readAnswer === false){
+
+	1) show Answer display
+	2) setTimeout(nextQuestion // a function //, 15000)
+
+function nextQuestion(){
+	readAnswer === true
+}
+

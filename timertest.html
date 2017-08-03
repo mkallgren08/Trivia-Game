@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="show-number"></div>
+
+    <br>
+    <button id="stop">Pause</button>
+    <button id="pause">Pause</button>
+    <button id="resume">Resume</button>
+    <img src = "http://i0.kym-cdn.com/entries/icons/original/000/000/091/TrollFace.jpg" id = "troll">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Script -->
+    <script type="text/javascript">
+    $("#troll").hide();
+    var number = 4 //prompt("How long?");
+    $("#show-number").html("<h2>" + number + "</h2>");
+    var intervalId;
+    // On click of button "pause" run pause
+    $("#pause").on("click", pause);
+    // Run "run" on click of run button
+    $("#resume").on("click", run);
+
+    function run() {
+      intervalId = setInterval(decrement, 1000);
+    }
+
+    function decrement() {
+
+      number--;
+
+      $("#show-number").html("<h2>" + number + "</h2>");
+
+      if (number === 0) {
+         $("#show-number").html("<h2>" + number + "</h2>");
+
+        pause();
+
+        //alert("Time Up!");
+
+        $("#troll").show();
+        setTimeout(logArray, 1000);
+      }
+    }
+
+    function pause() {
+
+      clearInterval(intervalId);
+    }
+
+    function reset() {
+      number = 2
+      $("#show-number").html("<h2>" + number + "</h2>");
+    }
+
+    // var j has to be global so the logArray function can increase it's value and NOT be overwritten
+    var j = 0
+
+    function logArray(){
+            var quarray = ["a", "b", "c", "D"]
+              var shuffledQuestionIndexes = [1, 3, 0, 2]
+              console.log(quarray[shuffledQuestionIndexes[j]])
+              if (j < 2){
+                j++;
+              }
+              reset()
+            }
+
+    function logArray(){
+    var quarray = ["a", "b", "c", "D"]
+        var shuffledQuestionIndexes = [1, 3, 0, 2]
+        console.log(quarray[shuffledQuestionIndexes[j]])
+        if (j < 4){
+          j++;
+        }
+       reset();
+        if (j < 4){
+          setTimeout(run, 3000);
+        }
+    }   
+    
+
+    run();
+
+    </script>
+
+  </body>
+
+</html>
