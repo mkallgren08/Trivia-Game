@@ -193,6 +193,8 @@ function reset() {
     userGuess = "";
     $(".progress-bar").css({"background-color" : "#337ab7"}) 
 	$(".progress-bar").css({"color" : "#fff"})
+	$("#rightorwrong").html("")
+    $("#answer-box").html("")
     console.log("User Guess: " + userGuess)
     $("#answers").hide(900)
     }
