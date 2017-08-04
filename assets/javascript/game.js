@@ -7,7 +7,13 @@ var quesOne = {
 		ans2: "An electrical discharge that occurs when the mineral piezite is heated.",
 		ans3: "An electrical charge that accumulates in certain materials in response to mechanical stress. From the Greek 'piezo' - 'to squeeze'.",
 		ans4: "The amount of electricty needed to safely cook a 14-inch classic-crust pizza, or 'piezo' in Urdu.",
-		answerTxt: "TO BE FILLED. The answer is Piezoelectricty!",
+		answerTxt: "A material is called piezoelectric (pz) if it accumulates an electric charge when a mechanical "
+		+ "stress is applied (i.e. pinching, pushing, bending, twisting, etc). The cool thing is that the opposite "
+		+ "is also true - the application of an electric current will cause mechanical deformation. This is actually "
+		+ "how simple electric buzzers work! A rapidly pulsing current is passed through a thin pz strip or plate "
+		+ "causing the pz material to rapidly flex. These quick vibrations induce other vibrations in the surrounding "
+		+ "air - which we then hear as a buzz! The pitch can be changed by altering the length of the current's pulse "
+		+ "and by increasing or decreasing the current strength!",
 };
 var quesOneAns =  quesOne.ans3;
 
@@ -17,9 +23,11 @@ var quesTwo = {
 		ans2: "The Knights who now say 'Eeki ekki poing zhong z'whup!'",
 		ans3: "A parrot",
 		ans4: "African or European?",
-		answerTxt: "TO BE FILLED. The answer is 'African or European'!"		
+		answerTxt: "No one knows for sure, but the first question to ask is if you're dealing with an African "
+		+ "or European swallow. Regardless of species, one must always remember that the coconut must have a "
+		+ "peeling husk so that the swallow might get a good grip."		
 };
-var quesTwoAns =  quesTwo.ans4;
+var quesTwoAns =  quesTwo.answerTxt;
 
 var quesThree = {
 		question: "Which of the following is a non-Newtonian liquid?",
@@ -27,19 +35,26 @@ var quesThree = {
 		ans2: "Ketchup",
 		ans3: "Salt water",
 		ans4: "Bourbon",
-		answerTxt: "TO BE FILLED. The answer is Ketchup!"		
+		answerTxt: "Ketchup is a Non-Newtonian Liquid (NNL). This means that it behaves like a liquid - except when "
+		+ "force is sharply applied. Then it behaves like a solid! Another example of a common NNL is corn starch "
+		+ "in water: you have probably seen this as a type of silly putty. If you run and hit your feet fast enough "
+		+ "you can actually *run* on NNLs as the material under your feet briefly becomes solid!"		
 };
-var quesThreeAns =  quesThree.ans2;
+var quesThreeAns =  quesThree.answerTxt;
 
 var quesFour = {
-		question: "Which naturally occuring (i.e. not manufactured) element has the highest melting point?",
+		question: "Which naturally occuring (i.e. not manufactured) element has the highest melting point at " 
+		+"atmospheric pressure?",
 		ans1: "Tungsten",
 		ans2: "Astatine",
 		ans3: "Titanium",
 		ans4: "Uranium",
-		answerTxt: "TO BE FILLED. The answer is Tungsten."		
+		answerTxt: "Tungsten has the highest melting point of any naturally occuring element, melting at a "
+		+ "blistering 3,422 C (6,191 F). Compare that to Iron (1,538 C/ 2,800 F), and Titanium (1,668 C/ 3,034 F)! "
+		+ "Tungsten's high melting point has to do with the arrangement of electrons in its d-shell orbitals - "
+		+ "they're half filled which is an exceptionally stable state to be in. More stability = harder to change."		
 };
-var quesFourAns =  quesFour.ans1;
+var quesFourAns =  quesFour.answertxt;
 
 var quesFive = {
 		question: "Which of these animals can hit thin bulletproof glass hard enough to shatter it?",
