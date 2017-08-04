@@ -7,7 +7,7 @@ var quesOne = {
 		ans2: "An electrical discharge that occurs when the mineral piezite is heated.",
 		ans3: "An electrical charge that accumulates in certain materials in response to mechanical stress. From the Greek 'piezo' - 'to squeeze'.",
 		ans4: "The amount of electricty needed to safely cook a 14-inch classic-crust pizza, or 'piezo' in Urdu.",
-
+		answerTxt: "TO BE FILLED. The answer is Piezoelectricty!",
 };
 var quesOneAns =  quesOne.ans3;
 
@@ -16,7 +16,8 @@ var quesTwo = {
 		ans1: "A duck",
 		ans2: "The Knights who now say 'Eeki ekki poing zhong z'whup!'",
 		ans3: "A parrot",
-		ans4: "African or European?",		
+		ans4: "African or European?",
+		answerTxt: "TO BE FILLED. The answer is 'African or European'!"		
 };
 var quesTwoAns =  quesTwo.ans4;
 
@@ -25,7 +26,8 @@ var quesThree = {
 		ans1: "Molten gold",
 		ans2: "Ketchup",
 		ans3: "Salt water",
-		ans4: "Bourbon",		
+		ans4: "Bourbon",
+		answerTxt: "TO BE FILLED. The answer is Ketchup!"		
 };
 var quesThreeAns =  quesThree.ans2;
 
@@ -34,7 +36,8 @@ var quesFour = {
 		ans1: "Tungsten",
 		ans2: "Astatine",
 		ans3: "Titanium",
-		ans4: "Uranium",		
+		ans4: "Uranium",
+		answerTxt: "TO BE FILLED. The answer is Tungsten."		
 };
 var quesFourAns =  quesFour.ans1;
 
@@ -43,97 +46,84 @@ var quesFive = {
 		ans1: "Pistol shrimp",
 		ans2: "Shard-nose viper",
 		ans3: "Mantis shrimp",
-		ans4: "Snapping turtle",		
+		ans4: "Snapping turtle",
+		answerTxt: "Mantis shrimp have the quickest punch on the planet. The genus has split into two "
+		+ "broad categories: 1) Spearers, with barbed and pointed arms and 2) Smashers, with club-like "
+		+ "arms formed via biomineralization. Both types of shrimp hit HARD. Their 'fists' accelerate "
+		+ "at 102 *thousand* meters per second-squared (228 thousand miles per second-squared). This "
+		+ "means their 'fists' move at 51mph from a dead standstill..... ouch."		
 };
-var quesFiveAns =  quesFive.ans3;
+var quesFiveAns =  quesFive.answerTxt;
 
 var quesSix = {
 		question: "What is the tallest mountain?",
 		ans1: "Denali",
 		ans2: "Olympus Mons",
-		ans3: "K2",
-		ans4: "Mt. Everest",		
+		ans3: "Mount Everest",
+		ans4: "Maunea Kea",
+		answerTxt: "The cool thing here is that these are all the tallest mountains in some ways: "
+		+ "Denali is the tallest mountain in North America at 20, 310', Mount Everest is the "
+		+ "tallest mountain measured from sea-level on Earth at 29, 029', Mauba Kea is the tallest "
+		+ "mountain on Earth if measured from its base on the Pacific floor at 33,476', but Olympus "
+		+ "Mons takes the cake for being the tallest mountain we've observed in the Solar System and "
+		+ "standing at a whopping 69,650'!"		
 };
-var quesSixAns =  quesSix.ans2;
+var quesSixAns =  quesSix.answertxt;
 
 var quesSeven = {
 		question: "What is a superconductor?",
 		ans1: "A fantastic leader of a music ensemble.",
 		ans2: "Any material whose electrical resistance is less than a saturated saltwater solution at 20C",
 		ans3: "A material that expels magnetic fields",
-		ans4: "A metal whose electrical conductivity is less than that of pure copper",		
+		ans4: "A metal whose electrical conductivity is less than that of pure copper",
+		answerTxt: "A superconductor is a material that has two incredibly useful properties: they have zero "
+		+ "electrical resistance and they expel magnetic fields. The first property is invaluable for lowering "
+		+ "energy consumption in electronics (amongst other things) and the second allows magnetic objects to "
+		+ "levitate."
+
 };
-var quesSevenAns =  quesSeven.ans3;
+var quesSevenAns =  quesSeven.answerTxt;
 
 var quesEight = {
 		question: "How old was Sir Isaac Newton when  Principia Mathematica - the work that outlined the fundamentals of his new math known as calculus - was published?",
 		ans1: "38",
 		ans2: "41",
 		ans3: "33",
-		ans4: "24",		
+		ans4: "24",
+		answerTxt: "Newton was a scientific and mathematical prodigy, developing calculus to help define equations "
+		+ "for physics problems that had stymied scientists for years. He outlined and published his ideas in "
+		+ "'Philosophiae Naturalis Principia Mathematica' at the ripe old age of 24.",		
 };
-var quesEightAns =  quesEight.ans4;
+var quesEightAns =  quesEight.answerTxt;
 
 var quesNine = {
 		question: "What is the maximum recorded G-load (acceleration) that the human body has survived?",
 		ans1: "~10 Gs",
 		ans2: "~60 Gs",
 		ans3: "~15 Gs",
-		ans4: "~40 Gs",		
+		ans4: "~40 Gs",	
+		answerTxt: "Col. John paul Stapp (Air Force), M.D., Ph.D was a biophysicist who studied the effects of "
+		+ "acceleration and deceleration on the human body.He was heavily involved in personally field testing "
+		+ "equipment that led to the creation of safe ejection seats and oxygen systems in aircraft. He was "
+		+ "subjected to over 40 G's on the last test run he did on the Sonic Wind sled. Sonic Wind reached 632 miles an "
+		+ "hour in 5 seconds on that run. Funnily enough, the greatest forces were applied while the sled was braking - "
+		+ " going from a little over 600 miles an hour to 0 in only 1.4 seconds....",	
 };
-var quesNineAns =  quesNine.ans4;
+var quesNineAns =  quesNine.answerTxt;
 
 var quesTen = {
 		question: "What sports did Dr. Neil deGrasse Tyson participate while studying physics at Harvard?",
 		ans1: "Crew",
 		ans2: "Wrestling",
 		ans3: "Dance",
-		ans4: "All of those",		
+		ans4: "All of the above",
+		answerTxt: "Neil deGrasse Tyson wrestled in High School and continued throughout his undergrad career. "
+		+ "He rowed crew his freshman year and danced in several intramural and competetive clubs.",		
 };
-var quesTenAns =  quesTen.ans4;
+var quesTenAns =  quesTen.answerTxt;
 
 var IntervalID = ""
 
-// var timer = {
-// 		  reset: function() {
-// 		    time = 20;
-// 		    $("#timer").html(timer)
-
-// 		  },
-
-// 		  runTimer: function() {
-// 		           intervalID = setInterval(timer.decrement, 1000)
-// 		      },
-
-		  
-// 		  stop: function() {
-// 		    //  TODO: Use clearInterval to stop the count here and set the clock to not be running.
-// 		        clearInterval(IntervalID);
-// 		  },
-
-// 		  decrement: function() {
-// 			time--;
-// 			$("#timer").html(time)
-// 			if (time === 0){
-// 				$("#answers").show();
-// 				$("#answer-box").html(answerArr[shuffledQuestionIndexes[j]]);
-// 				while (readAnswer = false){ 
-// 					if(questionArr[shuffledQuestionIndexes[j]].userGuess = answerArr[shuffledQuestionIndexes[j]]){
-// 						$("#rightorwrong").html("<h2>Correct!</h2>");
-// 						correct++;
-// 						$("#correct-answer-count").html(correct);
-// 						setTimeout(nextQuestion, 5000);
-// 					} else {
-// 						$("#rightorwrong").html("<h2>I'm sorry, that is incorrect.</h2>")
-// 						setTimeout(nextQuestion, 12000);
-// 					}
-// 				}; 
-
-// 			}; 			
-
-// 		  }
-		      
-// 		 } // End of timer object
 
 // GENERAL VARIABLES
 //-------------------------------------------------------------
@@ -168,11 +158,19 @@ function run() {
 	  $("#answer3").html(questionArr[shuffledQuestionIndexes[j]].ans3)
 	  $("#answer4").html(questionArr[shuffledQuestionIndexes[j]].ans4)
       intervalId = setInterval(decrement, 1000);
+      // $(".progress")
     }
 
 function decrement() {
       time--;
+      var width = (100 - (time*5))
       $("#timer").html(time);
+      $(".progress-bar").css("width", width +"%")
+      if (width > 70){
+      	$(".progress-bar").css({"background-color" : "red"}) 
+		$(".progress-bar").css({"color" : "black"})
+      }
+      console.log((100 - (time*5)) +"%;")
       console.log(time);
 
       if (time === 0 || userGuess !== "") {
@@ -192,7 +190,9 @@ function pause() {
 function reset() {
     time = 20
     $("#timer").html(time);
-    userGuess = ""
+    userGuess = "";
+    $(".progress-bar").css({"background-color" : "#337ab7"}) 
+	$(".progress-bar").css({"color" : "#fff"})
     console.log("User Guess: " + userGuess)
     $("#answers").hide(900)
     }
@@ -204,7 +204,7 @@ function displayAns(){
 		$("#questions").hide(250)
 		$("#total-correct").html(correct);
 		$("#total-questions").html(questionArr.length);
-        var answerText = answerArr[shuffledQuestionIndexes[j]];
+        var answerText = questionArr[shuffledQuestionIndexes[j]].answerTxt;
         if (ansKey[shuffledQuestionIndexes[j]] === userGuess){
         	console.log("Correct!")
         	correct++;
@@ -219,9 +219,13 @@ function displayAns(){
           j++;
           console.log("j=" + j)
         }
-       	setTimeout(reset, 3000);
+       	setTimeout(reset, 12000);
         if (j < questionArr.length){
-          setTimeout(run, 4000);
+          setTimeout(run, 12500);
+        }
+	  	if (j === questionArr.length){
+        	$("#answers").hide(250);
+        	$("#end-screen").show(500);
         }
     }          
 
@@ -274,7 +278,8 @@ $(document).ready(function() {
 	// })
 	$("#questions").hide();
 	$("#answers").hide();
-
+	$("#end-screen").hide();
+	$(".total-questions").html(questionArr.length);
 
 	$(".ans-btn").click(function(){
 		userGuess = $(this).attr("id")

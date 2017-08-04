@@ -21,8 +21,10 @@
 <body>
 	<div class="container body-wrapper"> <!-- Start Wrapper -->
 		<div class="page-header header">
-			<h1>Try your hand at our Trivia!</h1>
-			<h3> rules here </h3>
+			<h1 class = "title">Try your hand at our Trivia!</h1>
+			<h3> Welcome to Science Trivia! Test your knowledge of random scientific facts! </h3>
+			<h4> If you want to play, click the button below! You will have 20 secs to select an answer. Be carefuL! You can only enter one answer per question. After you enter one, read the cool fact and see if you were right!</h4>
+			<h4> There are <span class = "total-questions"></span> questions. After they've cycled through, you can see your total score, or keep track of it on the left-hand side as you play!</h4>
 			<button class = "btn btn-large btn-primary" id = "start-button"> Click here to Begin! </button>
 		</div> <!-- End Header -->
 
@@ -30,29 +32,13 @@
 			<div class="row" id = "questions">
 				<div class="col-sm-3">
 					<div class="row">
-<!-- 						<div class="col-sm-6 scorecounter">
-							<p class = "score"> Total Correct: </p> 
-						</div>
-						<div class="class-sm-6">
-							<p><span class = "total-correct score"></span></p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6"> 
-						</div>
-						<div class="class-sm-6">
-							<div class="row">
-								<p><span class = "total-questions score"></span></p>
-								<p class = "divisor"></p>
-							</div>
-						</div> -->
 						<p class = 'score'> Total Score: <span class = "total-correct"></span> / <span class = "total-questions"></span> </p>						
 					</div>
 				</div>
 				<div class="col-sm-8">
 					<p class = "question-header"> Question Number <span class = "question-number"></span></p>
 					<div class="progress">
-  						<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 6em; width: 0%;"><span id = "timer"></span><span> sec</span></div>
+  						<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" ><span id = "timer"></span><span> sec</span></div>
 					</div>
 					<div><p><span id = "question-box"></span></p></div>
 					<ol>
@@ -68,30 +54,22 @@
 
 			<div class="row" id = "answers">
 				<div class="col-sm-3">
-					<!-- <div class="row">
-						<div class="col-sm-6">
-							<p class = "score"> Total Correct: </p>
-						</div>
-						<div class="class-sm-6">
-							<span class = "total-correct score"></span>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6"> 
-						</div>
-						<div class="class-sm-6">
-							<span class = "total-questions score"></span>
-						</div>						
-					</div>		 -->
 					<p class = 'score'> Total Score: <span class = "total-correct"></span> / <span class = "total-questions"></span> </p>							
 				</div>
 					<div class="col-sm-8">
 						<div id = "rightorwrong"></div>
 						<div id = "answer-box"></div>
-						<!-- <div><span id = "total-correct"></span> / 
-						<span id = "total-questions"></span></div> -->
+					</div>
 				</div>
 				<div class="col-sm-1"></div>
+			</div>
+
+			<div class = "row" id = "end-screen">
+				<div class="col-sm-12">
+					<p>Good job on finishing the Trivia Quiz! Your total score is below.</p>
+					<p>Reload the page if you want to play again!</p>
+					<p class = 'score'> Total Score: <span class = "total-correct"></span> / <span class = "total-questions"></span> </p>					
+				</div>
 			</div>
 		</div> <!-- End Main Body -->
 	</div> <!-- End Wrapper -->
