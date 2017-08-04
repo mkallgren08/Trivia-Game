@@ -15,7 +15,7 @@ var quesOne = {
 		+ "air - which we then hear as a buzz! The pitch can be changed by altering the length of the current's pulse "
 		+ "and by increasing or decreasing the current strength!",
 };
-var quesOneAns =  quesOne.ans3;
+var quesOneAns =  quesOne.answerTxt;
 
 var quesTwo = {
 		question: "What is the average flight speed velocity of an unladen swallow?",
@@ -54,7 +54,7 @@ var quesFour = {
 		+ "Tungsten's high melting point has to do with the arrangement of electrons in its d-shell orbitals - "
 		+ "they're half filled which is an exceptionally stable state to be in. More stability = harder to change."		
 };
-var quesFourAns =  quesFour.answertxt;
+var quesFourAns =  quesFour.answerTxt;
 
 var quesFive = {
 		question: "Which of these animals can hit thin bulletproof glass hard enough to shatter it?",
@@ -83,7 +83,7 @@ var quesSix = {
 		+ "Mons takes the cake for being the tallest mountain we've observed in the Solar System and "
 		+ "standing at a whopping 69,650'!"		
 };
-var quesSixAns =  quesSix.answertxt;
+var quesSixAns =  quesSix.answerTxt;
 
 var quesSeven = {
 		question: "What is a superconductor?",
