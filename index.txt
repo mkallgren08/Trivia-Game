@@ -7,21 +7,14 @@
 	<!-- 	<link rel="stylesheet" type="text/css" href=""> -->
 	<!-- Bootstrap CSS -->
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
-	crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- Custom CSS -->
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <!-- jQuery -->
     <script
   		src="https://code.jquery.com/jquery-3.2.1.js"
   		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-		  crossorigin="anonymous"></script>
-	<!-- Bootstrap JS -->
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
-	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
-	crossorigin="anonymous"></script>
+  		crossorigin="anonymous"></script>
   	<!-- Custom JS -->
   	<script type = "text/javascript" src = "./assets/javascript/game.js"></script>
 </head>
@@ -33,15 +26,6 @@
 			<h4> If you want to play, click the button below! You will have 20 secs to select an answer. Be carefuL! You can only enter one answer per question. After you enter one, read the cool fact and see if you were right!</h4>
 			<h4> There are <span class = "total-questions"></span> questions. After they've cycled through, you can see your total score, or keep track of it on the left-hand side as you play!</h4>
 			<button class = "btn btn-large btn-primary" id = "start-button"> Click here to Begin! </button>
-			<!-- Single button -->
-			<div class="btn-group">
-				<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				Info <span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu">
-				<li><a href="https://github.com/mkallgren08/Trivia-Game">Go to the GitHub page for this project for more info!</a></li>
-				</ul>
-			</div>
 		</div> <!-- End Header -->
 
 		<div class="container"> <!-- Begin Main Body -->
